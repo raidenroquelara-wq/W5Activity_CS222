@@ -1,0 +1,216 @@
+﻿@charset "utf-8";
+
+@font-face {
+    font-family: 'Quicksand';
+    src: url('Quicksand-Regular.woff') format('woff'),
+         url('Quicksand-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html {
+
+   background: linear-gradient(135deg, #c6a47e 0%, #a6835c 100%) no-repeat fixed;
+   min-height: 100vh;
+   scroll-behavior: smooth;
+}
+
+body {
+   background-color: #faf7f2; 
+   font-family: 'Quicksand', Arial, Helvetica, sans-serif;
+   max-width: 1200px;
+   width: 94%;
+   margin: 40px auto;
+   border-radius: 20px;
+   box-shadow: 0 25px 60px rgba(100, 75, 50, 0.25);
+   overflow: visible;
+}
+
+header {
+   background-color: #8c6b4a; 
+   width: 100%;
+   padding: 20px 40px; 
+   box-sizing: border-box;
+   border-bottom: 5px solid #6b8e72; 
+   border-radius: 20px 20px 0 0;
+   position: relative;
+}
+
+nav.horizontal {
+   position: fixed;
+   left: -290px; 
+   top: 0;
+   width: 260px;
+   height: 100vh;
+   background-color: #8c6b4a; 
+   padding: 120px 25px 40px 25px;
+   box-sizing: border-box;
+   z-index: 999999;
+   box-shadow: 12px 0 40px rgba(0, 0, 0, 0.3);
+   border-right: 5px solid #6b8e72; 
+   transition: left 0.4s cubic-bezier(0.165, 0.84, 0.44, 1); 
+}
+
+nav.horizontal ul {
+   display: flex;
+   flex-direction: column; 
+   gap: 15px; 
+   margin: 0;
+   padding: 0;
+   list-style: none;
+   width: 100%;
+}
+
+nav.horizontal ul li {
+   float: none;
+   display: block;
+   width: 100%;
+}
+
+nav.horizontal ul li a {
+   display: block;
+   background-color: #faf7f2; 
+   color: #6d4f33; 
+   font-weight: bold;
+   padding: 12px 20px; 
+   border-radius: 30px; 
+   text-decoration: none;
+   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+   text-align: center;
+   transition: all 0.25s ease-in-out;
+}
+
+
+nav.horizontal ul li a:hover {
+   color: #1c2e24; 
+   background-color: #a3b19b; 
+   border-color: #a3b19b;
+   box-shadow: 0 6px 18px rgba(163, 177, 155, 0.6); 
+   transform: scale(1.03);
+}
+
+
+header:hover nav.horizontal,
+nav.horizontal:hover {
+   left: 0px; 
+}
+
+
+main {
+   padding: 40px; 
+   box-sizing: border-box;
+   overflow: visible;
+   display: block;
+}
+
+
+main::after {
+   content: "";
+   display: table;
+   clear: both;
+}
+
+
+#photo {
+   width: 100%;
+   max-width: 100%;
+   height: auto;
+   display: block;
+   clear: both;
+   border-radius: 16px;
+   box-shadow: 0 12px 35px rgba(140, 107, 74, 0.15);
+   margin-bottom: 40px;
+}
+
+#about_tss {
+   float: left; 
+   width: 61%;
+   box-sizing: border-box;
+}
+
+#about_tss h1 {
+   color: #6d4f33; 
+   font-size: 2.8em;
+   font-weight: bold;
+   margin-top: 0;
+   margin-bottom: 20px;
+}
+
+#about_tss h2 {
+   color: #4f6d55; 
+   font-size: 1.9em;
+   margin-top: 35px;
+   margin-bottom: 15px;
+   border-bottom: 2px solid #cbd5c5;
+   padding-bottom: 5px;
+}
+
+#about_tss p {
+   font-size: 1.1em;
+   line-height: 1.75em;
+   color: #4a3b32;
+   margin-bottom: 20px;
+}
+
+.classes-list {
+   padding-left: 20px;
+}
+
+.classes-list li {
+   font-size: 1.05em;
+   line-height: 1.7em;
+   margin-bottom: 12px;
+   color: #4a3b32;
+}
+
+
+aside {
+   float: right; 
+   width: 34%;
+   box-sizing: border-box;
+}
+
+aside h1 {
+   color: #6d4f33;
+   font-size: 2em;
+   font-weight: bold;
+   margin-top: 0;
+   margin-bottom: 25px;
+   text-align: center;
+}
+
+aside blockquote {
+   background-color: #e8ece6; 
+   border-left: 5px solid #6b8e72; 
+   color: #2d3b32;
+   font-style: italic;
+   font-size: 1.05em;
+   line-height: 1.6em;
+   margin: 0 0 25px 0;
+   padding: 20px;
+   border-radius: 0 12px 12px 0;
+   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+   transition: all 0.3s ease;
+}
+
+aside blockquote:hover {
+   background-color: #f1f4ef;
+   transform: translateX(4px);
+}
+
+footer {
+   background-color: #8c6b4a; 
+   color: #faf7f2;
+   padding: 30px 20px;
+   border-radius: 0 0 20px 20px;
+   clear: both; 
+   width: 100%;
+}
+
+footer address {
+   font-style: normal;
+   font-size: 1em;
+   text-align: center;
+   letter-spacing: 0.05em;
+   line-height: 1.6em;
+}
